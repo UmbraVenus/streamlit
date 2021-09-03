@@ -1,8 +1,9 @@
-import streamlit
+import streamlit as st
 from streamlit_agraph import agraph, Node, Edge, Config
 import pandas as pd
 import numpy as np
 
+@st.cache(suppress_st_warning=True)
 def get_graph(file):
 
     nodes = []
@@ -12,8 +13,8 @@ def get_graph(file):
         nodes.append(Node(id=x))
     for index, row in df.iterrows():
         edges.append(Edge(source=row["Source"], target=row["Target"], type="CURVE_SMOOTH"))
-    config = Config(width=600, 
-                height=600, 
+    config = Config(width=1000, 
+                height=800, 
                 directed=False,
                 nodeHighlightBehavior=True, 
                 highlightColor="#F7A7A6", # or "blue"

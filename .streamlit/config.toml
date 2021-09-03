@@ -1,0 +1,96 @@
+
+
+[runner]
+
+# Allows you to type a variable or string by itself in a single line of Python code to write it to the app.
+# Default: true
+magicEnabled = true
+# Sets the MPLBACKEND environment variable to Agg inside Streamlit to prevent Python crashing.
+# Default: true
+fixMatplotlib = true
+
+# Run the Python Garbage Collector after each script execution. This can help avoid excess memory use in Streamlit apps, but could introduce delay in rerunning the app script for high-memory-use applications.
+# Default: true
+postScriptGC = true
+
+[server]
+
+# Max size, in megabytes, for files uploaded with the file_uploader.
+# Default: 200
+maxUploadSize = 500
+
+[browser]
+
+# Internet address where users should point their browsers in order to connect to the app. Can be IP address or DNS name and path.
+# This is used to: - Set the correct URL for CORS and XSRF protection purposes. - Show the URL on the terminal - Open the browser - Tell the browser where to connect to the server when in liveSave mode.
+# Default: 'localhost'
+serverAddress = "localhost"
+
+# Whether to send usage statistics to Streamlit.
+# Default: true
+gatherUsageStats = true
+
+# Port where users should point their browsers in order to connect to the app.
+# This is used to: - Set the correct URL for CORS and XSRF protection purposes. - Show the URL on the terminal - Open the browser - Tell the browser where to connect to the server when in liveSave mode.
+# Default: whatever value is set in server.port.
+serverPort = 8501
+
+[mapbox]
+
+# Configure Streamlit to use a custom Mapbox token for elements like st.pydeck_chart and st.map. To get a token for yourself, create an account at https://mapbox.com. It's free (for moderate usage levels)!
+# Default: ""
+token = ""
+
+[s3]
+
+# Name of the AWS S3 bucket to save apps.
+# Default: (unset)
+#bucket =
+
+# URL root for external view of Streamlit apps.
+# Default: (unset)
+#url =
+
+# Access key to write to the S3 bucket.
+# Leave unset if you want to use an AWS profile.
+# Default: (unset)
+#accessKeyId =
+
+# Secret access key to write to the S3 bucket.
+# Leave unset if you want to use an AWS profile.
+# Default: (unset)
+#secretAccessKey =
+
+# The "subdirectory" within the S3 bucket where to save apps.
+# S3 calls paths "keys" which is why the keyPrefix is like a subdirectory. Use "" to mean the root directory.
+# Default: ""
+keyPrefix = ""
+
+# AWS region where the bucket is located, e.g. "us-west-2".
+# Default: (unset)
+#region =
+
+# AWS credentials profile to use.
+# Leave unset to use your default profile.
+# Default: (unset)
+#profile =
+
+[theme]
+
+# Primary accent color for interactive elements.
+#primaryColor =
+
+# Background color for the main content area.
+#backgroundColor =
+
+# Background color used for the sidebar and most interactive widgets.
+#secondaryBackgroundColor =
+
+# Color used for almost all text.
+#textColor =
+
+# Font family for all text in the app, except code blocks. One of "sans serif", "serif", or "monospace".
+# Default: "sans serif"
+base = "light"
+primaryColor = "purple"
+font = "serif"
